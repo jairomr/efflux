@@ -1,5 +1,6 @@
 efluxo.result<-function(dir=NULL,gravar=FALSE, startRange=0, endRange=9){
   arquivos<-list.files(dir)
+  ##Comteraio
   docn<-0
   i=0
   RData=list()
