@@ -1,6 +1,5 @@
 efluxo.result<-function(dir=NULL,gravar=FALSE, startRange=0, endRange=9){
   arquivos<-list.files(dir)
-  ##Comteraio
   docn<-0
   i=0
   RData=list()
@@ -12,6 +11,7 @@ efluxo.result<-function(dir=NULL,gravar=FALSE, startRange=0, endRange=9){
       doc<-read.table(paste(dir,nomeS,'.dat',sep=''),comment.char = ";")
       doc2<-read.csv(paste(dir,nomeS,'.csv',sep=''))
       limite<-length(doc[,1])
+      tamanhoDoc2<-length(doc[,1])
       for(linha in 1:limite){
         if(linha<limite){
           if(doc[linha,1] < doc[(linha+1),1]){
